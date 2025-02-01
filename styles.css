@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header Styles */
 header {
     background-color: #333;
     color: white;
@@ -16,13 +18,15 @@ header h1 {
     margin: 0;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Change from inline to inline-block */
     margin: 0 15px;
 }
 
@@ -31,6 +35,7 @@ nav ul li a {
     text-decoration: none;
 }
 
+/* Section Styles */
 section {
     padding: 20px;
     margin: 20px;
@@ -38,6 +43,7 @@ section {
     border-radius: 8px;
 }
 
+/* Footer Styles */
 footer {
     background-color: #333;
     color: white;
@@ -51,4 +57,50 @@ footer {
 footer a {
     color: white;
     text-decoration: none;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Header adjustments for mobile */
+    header {
+        padding: 15px;
+    }
+
+    /* Navigation for small screens (stack vertically) */
+    nav ul {
+        text-align: center; /* Center the menu items */
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Stack the links vertically */
+        margin-bottom: 10px;
+    }
+
+    /* Section adjustments for smaller screens */
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Footer adjustments for mobile */
+    footer {
+        position: relative; /* Change from fixed to relative */
+    }
+}
+
+/* Additional adjustments for very small devices like phones in portrait mode */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px; /* Slightly reduce font size for very small screens */
+    }
+
+    nav ul li {
+        margin: 0 8px; /* Reduce margin between navigation items */
+    }
+
+    footer {
+        font-size: 12px; /* Reduce footer font size */
+        padding: 8px;
+    }
 }

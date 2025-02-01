@@ -23,10 +23,11 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    text-align: center; /* Center the menu on the screen */
 }
 
 nav ul li {
-    display: inline-block; /* Change from inline to inline-block */
+    display: inline-block; /* Keep the list items inline */
     margin: 0 15px;
 }
 
@@ -61,20 +62,23 @@ footer a {
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
-    /* Header adjustments for mobile */
+    /* Adjust the padding of header for smaller devices */
     header {
         padding: 15px;
     }
 
-    /* Navigation for small screens (stack vertically) */
+    /* Ensure the links stay inline and centered */
     nav ul {
-        text-align: center; /* Center the menu items */
         padding-top: 10px;
     }
 
     nav ul li {
-        display: block; /* Stack the links vertically */
-        margin-bottom: 10px;
+        display: inline-block; /* Keep the list items inline */
+        margin: 0 10px; /* Reduced margin for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Slightly smaller font size for mobile */
     }
 
     /* Section adjustments for smaller screens */
@@ -96,7 +100,7 @@ footer a {
     }
 
     nav ul li {
-        margin: 0 8px; /* Reduce margin between navigation items */
+        margin: 0 5px; /* Even smaller margin between navigation items */
     }
 
     footer {

@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background-image: url('IMG_9483.jpg'); /* Background image */
+    background-image: url('background.jpg'); /* Background image */
     background-size: cover; /* Ensure the image covers the entire screen */
     background-position: center; /* Center the image */
     background-attachment: fixed; /* Make the background fixed as you scroll */
@@ -19,6 +19,7 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
+    width: 100%;
 }
 
 header h1 {
@@ -31,6 +32,8 @@ nav ul {
     padding: 0;
     margin: 0;
     text-align: center; /* Center the menu on the screen */
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Prevent the menu from overflowing */
 }
 
 nav ul li {
@@ -67,3 +70,40 @@ footer a {
     color: white;
     text-decoration: none;
 }
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust the padding of header for smaller devices */
+    header {
+        padding: 15px;
+    }
+
+    /* Ensure the links stay inline and centered */
+    nav ul {
+        padding-top: 10px;
+        text-align: center; /* Keep the links centered */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    nav ul li {
+        display: inline-block; /* Keep the list items inline */
+        margin: 0 10px; /* Reduced margin for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    /* Section adjustments for smaller screens */
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Footer adjustments for mobile */
+    footer {
+        position: relative; /* Change from fixed to relative */
+    }
+}
+
+/* Additional adjustments for very small devices like phones in portr

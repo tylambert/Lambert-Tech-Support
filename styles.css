@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    background-image: url('img_9483.jpg'); /* Background image */
+    background-image: url('IMG_9483.jpg'); /* Background image */
     background-size: cover; /* Ensure the image covers the entire screen */
     background-position: center; /* Center the image */
     background-attachment: fixed; /* Make the background fixed as you scroll */

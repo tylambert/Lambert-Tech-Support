@@ -19,13 +19,15 @@ header {
     color: white;
     padding: 10px;
     text-align: center;
-    width: 100%;
 }
 
 header h1 {
     margin: 0;
+    font-family: 'Dancing Script', cursive; /* Apply Dancing Script font */
+    font-size: 36px; /* You can adjust the size as needed */
+    letter-spacing: 1px; /* Optional: adds a little spacing between letters */
+    text-transform: uppercase; /* Optional: makes the title uppercase */
 }
-
 /* Navigation Styles */
 nav ul {
     list-style-type: none;

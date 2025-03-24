@@ -73,6 +73,37 @@ footer a {
     text-decoration: none;
 }
 
+/* Button Styles */
+button {
+    padding: 12px 25px;
+    background-color: black; /* Black button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+/* Input Styles */
+input {
+    padding: 12px;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: black; /* Black highlight on focus */
+    outline: none;
+}
+
+button:hover {
+    background-color: gray; /* Darker blue on hover */
+}
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     /* Adjust the padding of header for smaller devices */

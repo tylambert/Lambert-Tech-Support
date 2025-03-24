@@ -1,54 +1,45 @@
-/* Reset default margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f6f5; /* Light gray background as default */
-    background-image: url('IMG_9483.jpg'); /* Optional background image */
-    background-size: cover; /* Ensure image covers the screen */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url('IMG_9483.jpg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
     background-position: center; /* Center the image */
-    background-attachment: fixed; /* Fixed background on scroll */
-    color: #333; /* Dark gray text for readability */
-    line-height: 1.6;
+    background-attachment: fixed; /* Make the background fixed as you scroll */
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
+    height: 100vh; /* Full height of the viewport */
 }
 
 /* Header Styles */
 header {
     background-color: rgba(51, 51, 51, 0.8); /* Dark overlay for header */
     color: white;
-    padding: 15px 0; /* Consistent padding */
+    padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-family: 'Courier New', monospace;
-    font-size: 36px; /* Larger title */
-    letter-spacing: 1px; /* Slight spacing between letters */
-    text-transform: uppercase; /* Uppercase title */
+    font-size: 36px; /* You can adjust the size as needed */
+    letter-spacing: 1px; /* Optional: adds a little spacing between letters */
+    text-transform: uppercase; /* Optional: makes the title uppercase */
 }
-
 /* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Center the menu */
+    text-align: center; /* Center the menu on the screen */
     white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden; /* Prevent the menu from overflowing */
 }
 
 nav ul li {
-    display: inline-block; /* Inline list items */
+    display: inline-block; /* Keep the list items inline */
     margin: 0 15px;
 }
 
@@ -57,57 +48,13 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Main Container (merged with section styles) */
-.container {
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    padding: 30px;
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 500px;
-    margin: 20px auto; /* Center the container */
-    text-align: center;
-    flex-grow: 1; /* Expands between header and footer */
-}
-
-/* Input Styles */
-input {
-    padding: 12px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus {
-    border-color: #003087; /* Blue highlight on focus */
-    outline: none;
-}
-
-/* Button Styles */
-button {
-    padding: 12px 25px;
-    background-color: black; /* Black button */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: gray; /* Darker blue on hover */
-}
-
-/* Result Text */
-#result {
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.4;
+    flex-grow: 1; /* Allow section to grow and take available space */
 }
 
 /* Footer Styles */
@@ -115,10 +62,10 @@ footer {
     background-color: rgba(51, 51, 51, 0.8); /* Dark overlay for footer */
     color: white;
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    margin-top: auto; /* Pushes footer to bottom */
+    padding: 10px;
+    position: relative; /* Relative position to the normal flow */
     width: 100%;
+    margin-top: auto; /* Push the footer to the bottom of the page */
 }
 
 footer a {
@@ -126,36 +73,39 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    /* Adjust the padding of header for smaller devices */
     header {
         padding: 15px;
     }
 
+    /* Ensure the links stay inline and centered */
     nav ul {
         padding-top: 10px;
-        text-align: center;
-        white-space: nowrap;
+        text-align: center; /* Keep the links centered */
+        white-space: nowrap; /* Prevent wrapping */
     }
 
     nav ul li {
+        display: inline-block; /* Keep the list items inline */
         margin: 0 10px; /* Reduced margin for smaller screens */
     }
 
     nav ul li a {
-        font-size: 16px; /* Slightly smaller font */
+        font-size: 16px; /* Slightly smaller font size for mobile */
     }
 
-    .container {
+    /* Section adjustments for smaller screens */
+    section {
         margin: 10px;
         padding: 15px;
     }
 
+    /* Footer adjustments for mobile */
     footer {
-        position: relative; /* Ensures footer stays in flow */
+        position: relative; /* Change from fixed to relative */
     }
 }
+
+/* Additional adjustments for very small devices like phones in portr
